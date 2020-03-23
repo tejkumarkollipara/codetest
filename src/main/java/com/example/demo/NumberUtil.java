@@ -28,7 +28,7 @@ public class NumberUtil {
 				LOGGER.info(sortedArray[i] + " ");
 				list.add(sortedArray[i]);
 			}
-			list.toArray(new Integer[list.size()]);
+			uniqueNumbers = list.toArray(new Integer[list.size()]);
 		} catch (Exception e) {
 			LOGGER.error("Exceptionoccured while processing sorted numbers ", e);
 		}
