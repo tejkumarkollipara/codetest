@@ -42,5 +42,13 @@ public class NumberUtilTests {
 		Integer[] uniqueNumbers = numberUtil.getUniqueNumbers(sortedArray);
 		Assert.assertFalse(Arrays.equals(expectedUniqueNumbers, uniqueNumbers));
 	}
+	
+	@Test
+	public void testGetUnigeNumbersNegativeSortedOrderShouldPass() {
+		Integer[] sortedArray = new Integer[] { -3, -3, -1, 1, 3, 3, 5, 7, 8, 8, 10 };
+		Integer[] expectedUniqueNumbers = new Integer[] {-3, -1, 1, 3, 5, 7, 8, 10 };
+		Integer[] uniqueNumbers = numberUtil.getUniqueNumbers(sortedArray);
+		Assert.assertTrue(Arrays.equals(expectedUniqueNumbers, uniqueNumbers));
+	}
 
 }
